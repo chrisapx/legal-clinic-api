@@ -1,0 +1,1 @@
+This service manages user accounts, lawyers and legal firms accounts.

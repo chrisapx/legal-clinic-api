@@ -1,0 +1,1 @@
+This service manages learning on the platform. We have a blog, chat tool, the stack overflow like legal tool for lawyers, news and updates section, etc, just a toll to enable people keep learning and updated in the legal spce.

@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: kw-engine-adapter
+  datasource:
+    url: ${LC_DB_URL:jdbc:mariadb://localhost:3306/lc-kw}
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: ${LC_DB_USER:root}
+    password: ${LC_DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-5-nano
+
+tebi:
+  endpoint: https://s3.tebi.io
+  access-key: ${TEBI_ACCESS_KEY}
+  secret-key: ${TEBI_SECRET_KEY}
+  bucket: ${TEBI_BUCKET:lc-bucket}
+
+app:
+  frontend:
+    url: ${FRONTEND_URL:http://localhost:3000}

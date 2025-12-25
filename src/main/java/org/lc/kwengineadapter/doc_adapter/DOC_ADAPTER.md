@@ -1,0 +1,1 @@
+This service hosts legal doc templates and generates legal docs in pdf  and word formats
