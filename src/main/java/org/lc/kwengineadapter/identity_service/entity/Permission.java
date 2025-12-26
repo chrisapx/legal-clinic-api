@@ -24,7 +24,7 @@ public class Permission extends BaseEntity {
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    @Column(nullable = false)
+    @Column(name = "`grouping`", nullable = false)
     private String grouping; // e.g., "BLOG", "USER", "ROLE", "PERMISSION"
 
     @Column(nullable = false)

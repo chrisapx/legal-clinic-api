@@ -2,19 +2,25 @@ spring:
   application:
     name: kw-engine-adapter
   datasource:
-    url: ${LC_DB_URL:jdbc:mariadb://localhost:3306/lc-kw}
-    driver-class-name: org.mariadb.jdbc.Driver
+    url: ${LC_DB_URL:jdbc:mysql://localhost:3306/lc-kw2}
+    driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${LC_DB_USER:root}
-    password: ${LC_DB_PASSWORD}
+    password: ${LC_DB_PASSWORD:mysql}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
+    username: ${MAIL_USERNAME:test@gmail.com}
+    password: ${MAIL_PASSWORD:test_pass}
     properties:
       mail:
         smtp:
@@ -23,17 +29,19 @@ spring:
             enable: true
   ai:
     openai:
-      api-key: ${OPENAI_API_KEY}
+      api-key: ${OPENAI_API_KEY:sk_test_key}
       chat:
         options:
           model: gpt-5-nano
 
 tebi:
   endpoint: https://s3.tebi.io
-  access-key: ${TEBI_ACCESS_KEY}
-  secret-key: ${TEBI_SECRET_KEY}
+  access-key: ${TEBI_ACCESS_KEY:tebi_akey}
+  secret-key: ${TEBI_SECRET_KEY:tebi_skey}
   bucket: ${TEBI_BUCKET:lc-bucket}
 
 app:
   frontend:
     url: ${FRONTEND_URL:http://localhost:3000}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000,http://localhost:5173}

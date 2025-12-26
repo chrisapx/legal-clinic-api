@@ -1,0 +1,19 @@
+# Database Configuration
+LC_DB_URL=jdbc:mysql://monitor.dbs.idmfh.com:3306/lc-kw-test
+LC_DB_USER=admin
+LC_DB_PASSWORD=1Dm@2o2o5
+
+# Email Configuration
+MAIL_USERNAME=idmdatacorp@gmail.com
+MAIL_PASSWORD=vkqpzpbrkcixonjf
+
+# OpenAI Configuration
+OPENAI_API_KEY=sk-proj-your_openai_api_key_here
+
+# Tebi S3 Storage Configuration
+TEBI_ACCESS_KEY=9Sx7obV9lUzEGEhW
+TEBI_SECRET_KEY=jmjdkY4hCSiY69chDYihC00Y1Qthg9IjQVxbMtrc
+TEBI_BUCKET=lc-bucket
+
+# Frontend Configuration
+FRONTEND_URL=https://legal-clinic.idmfh.com

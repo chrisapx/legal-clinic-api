@@ -14,8 +14,10 @@
 *.swo
 *~
 
-# Build outputs
-build/
+# Build outputs (exclude build artifacts except JAR files)
+build/*
+!build/libs/
+!build/libs/*.jar
 target/
 bin/
 out/

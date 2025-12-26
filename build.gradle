@@ -37,6 +37,7 @@ dependencies {
     implementation 'org.springframework.ai:spring-ai-pdf-document-reader'
 //    implementation 'org.springframework.ai:spring-ai-starter-model-anthropic'
     implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+    implementation 'org.liquibase:liquibase-core'
     implementation 'io.jsonwebtoken:jjwt-api:0.12.3'
     implementation 'software.amazon.awssdk:s3:2.20.26'
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.3'
